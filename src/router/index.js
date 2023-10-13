@@ -102,6 +102,14 @@ const asyncRouter = [
         meta: {
             title: "用户管理"
         }
+    },
+    {
+        path: '/image/list',
+        name: '/image/list',
+        component: () => import('@/views/image/list.vue'),
+        meta: {
+            title: "图库列表"
+        }
     }
 ]
 

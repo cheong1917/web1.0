@@ -81,7 +81,7 @@ useResizeObserver(el, () => {
 </script>
 
 <template>
-  <el-card shadow="never" class="mt-5">
+  <el-card shadow="never">
     <template #header>
       <div class="flex justify-between">
         <span class="text-sm">统计</span>

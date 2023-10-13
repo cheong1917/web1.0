@@ -1,15 +1,20 @@
 <script setup>
-import {getStatistics1} from "@/api/index.js";
+import {getStatistics1,getStatistics2} from "@/api/index.js";
 import CountTo from "@/components/CountTo.vue";
 import IndexNavs from "@/components/indexNavs.vue";
 import IndexChart from "@/components/indexChart.vue";
-import {useUserinfo} from "@/store/userinfo.js";
-const store = useUserinfo()
+import IndexCard from "@/components/indexCard.vue";
 const panels = ref([])
 getStatistics1().then(res => {
   panels.value = res.panels
 })
 
+const goods = ref([])
+const order = ref([])
+getStatistics2().then(res=>{
+  goods.value=res.goods
+  order.value=res.order
+})
 </script>
 
 <template>
@@ -67,12 +72,8 @@ getStatistics1().then(res => {
           <el-divider/>
           <!--footer     -->
           <div class="flex justify-between">
-            <span>
-              {{ item.subTitle }}
-            </span>
-            <span>
-              {{ item.subValue }}
-            </span>
+            <span>{{ item.subTitle }}</span>
+            <span>{{ item.subValue }}</span>
           </div>
         </el-card>
       </el-col>
@@ -82,12 +83,14 @@ getStatistics1().then(res => {
     <IndexNavs/>
 
     <!--    图表-->
-    <el-row :gutter="20">
+    <el-row :gutter="20" class="mt-5">
       <el-col :span="12">
         <index-chart/>
       </el-col>
-      <el-col :span="12">
-
+      <!--      右下-->
+      <el-col :span="12" class="space-y-4">
+        <index-card title="商品提示" tip="店铺" tag-type="warning" :btns="goods"/>
+        <index-card title="交易提示" tip="订单" tag-type="danger" :btns="order"/>
       </el-col>
     </el-row>
 
