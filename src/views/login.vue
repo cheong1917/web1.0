@@ -1,5 +1,4 @@
 <script setup>
-//import {User, Lock} from '@element-plus/icons-vue'
 import {toast} from "@/utils/Putil.js";
 import {useRouter} from "vue-router";
 import {useUserinfo} from "@/store/userinfo.js";
@@ -62,7 +61,7 @@ onBeforeUnmount(()=>{
 
 <template>
   <el-row class="min-h-screen">
-    <el-col :lg="16" :md="12" class="bg-rose-300 setFlex">
+    <el-col :lg="16" :md="12" class="setFlex bgc hidden-xs-only">
       <div>
         <div class="font-bold text-6xl text-light-50 mb-4">welcome</div>
         <div class="text-light-50">this page is test page</div>
@@ -79,7 +78,7 @@ onBeforeUnmount(()=>{
           :model="form"
           :rules="rules"
           ref="ruleFormRef"
-          class="w-[250px]"
+          class="w-250px"
       >
         <el-form-item prop="username">
           <el-input v-model="form.username" clearable placeholder="请输入账号">
@@ -104,7 +103,7 @@ onBeforeUnmount(()=>{
         <el-form-item>
           <el-button
               type="primary"
-              color="#fda4af"
+              color="#89f7fe"
               round class="w-[250px]"
               :loading="loading"
               @click="onSubmit"
@@ -118,11 +117,15 @@ onBeforeUnmount(()=>{
 </template>
 
 <style scoped>
+.bgc{
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+}
 .setFlex {
-  @apply flex items-center justify-center
+  @apply flex items-center justify-center;
 }
 
 .setSpanLine {
-  @apply h-[1px] w-16 bg-gray-300
+  @apply h-1px w-16 bg-gray-300;
 }
+
 </style>

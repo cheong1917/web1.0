@@ -150,7 +150,8 @@ const handelRefresh = () => {
 
 <style scoped>
 .f-header {
-  @apply flex items-center bg-rose-300 text-light-50 fixed top-0 left-0 right-0;
+  @apply flex items-center text-light-50 fixed top-0 left-0 right-0;
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
   height: 64px;
   z-index: 1000;
 }
@@ -168,7 +169,10 @@ const handelRefresh = () => {
 }
 
 .LIcon-btn:hover {
-  @apply bg-rose-200
+  @apply text-black;
+}
+.LIcon-btn:active{
+  @apply bg-cyan-100
 }
 
 .f-header .dropdown {

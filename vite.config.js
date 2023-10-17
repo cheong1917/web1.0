@@ -4,12 +4,12 @@ import AutoImport from 'unplugin-auto-import/vite';
 import path from 'path'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-import WindiCSS from 'vite-plugin-windicss'
+import UnoCSS from 'unocss/vite'
 
 export default defineConfig({
   plugins: [
     vue(),
-    WindiCSS(),
+    UnoCSS(),
     //配置插件
     AutoImport({
       imports:['vue','vue-router'],

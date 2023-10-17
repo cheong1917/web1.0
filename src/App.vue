@@ -45,4 +45,22 @@ ul, ol {
 img {
   border: 0;
 }
+
+/** 全局滚动条样式修改 **/
+::-webkit-scrollbar{
+  width: 4px;
+  height: 6px;
+}
+::-webkit-scrollbar-corner{
+  display: block;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.1);
+}
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track{
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
 </style>

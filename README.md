@@ -5,7 +5,8 @@ axios
 pinia  
 element plus  
 windicss   
-echarts
+echarts  
+vite
 ***
 ### **step0**  
 git clone
