@@ -1,15 +1,15 @@
-![](https://raw.githubusercontent.com/cheong1917/pic_img/master/img/RE4wEaN.jpg)
+![](https://raw.githubusercontent.com/cheong1917/pic_img/master/img/logo.png)
 
 # first vue3 project 
 axios  
 pinia  
 element plus  
-windicss   
+UnoCss  
 echarts  
 vite
 ***
 ### **step0**  
-git clone
+git clone || downloadZip
 ### **step1**  
 cmd->`npm install`  
 ### **step2**
